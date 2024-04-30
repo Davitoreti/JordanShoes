@@ -63,39 +63,41 @@
 }
 
 #div__textImg-paragraph {
-    font-weight: 500;
-}
-
-#div__textImg-paragraph::before {
-    content: "";
-    color: green;
-    animation: palavras 10s none;
-}
-
-#div__textImg-paragraph::after {
-    content: "";
     position: absolute;
-    height: 100%;
-    border-left: green;
-} 
+    font-weight: 500;
+    animation: mask-reveal 5s steps(100) normal, cursor 0.8s infinite normal;;
+    border-right: 2px solid white;
+    white-space: nowrap;
+}
 
-@keyframes palavras {
-    0%, 20% {
-        content: "O tênis Jordan";
+#div__textImg-paragraph span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff; 
+}
+
+@keyframes cursor {
+    from {
+        border-right-color: white;
     }
-    21%, 40% {
-        content: "é fruto de uma velha";
-    }
-    41%, 60% {
-        content: "e forte parceria entre";
-    }
-    61%, 80% {
-        content: "a Nike e o jogador";
-    }
-    81%, 100% {
-        content: "Michael Jordan";
+    to {
+        border-right-color: transparent;
     }
 }
+
+@keyframes mask-reveal {
+    0% {
+      width: 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+    }
+    100% {
+      width: 69.5%;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); 
+    }
+  }
 
 .div__img-fixed {
     width: 100%;
