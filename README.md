@@ -10,6 +10,8 @@ https://github.com/Davitoreti/JordanShoes
 
 https://jordan-shoes-flame.vercel.app/
 
+##
+
 <p align="center">
  Desafios de front-end com projetos práticos da comunidade Codelândia no <a href="https://desafio22-projetos-codelandia.vercel.app/">Projetos Codelândia</a>, idealizada pelo <a href="https://www.iuricode.com/">Iuri Silva</a>.
 </p>
